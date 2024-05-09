@@ -1,0 +1,46 @@
+Schema SQL
+1
+CREATE TABLE superstore (
+2
+    item_id INTEGER PRIMARY KEY,
+3
+    item_name TEXT,
+4
+    category TEXT,
+5
+    price DECIMAL(10, 2),
+6
+    stock_quantity INTEGER,
+7
+    average_rating DECIMAL(3, 2)
+8
+);
+9
+​
+10
+INSERT INTO superstore (item_id, item_name, category, price, stock_quantity, average_rating)
+11
+VALUES
+12
+    (1, 'Stainless Steel Cookware Set', 'Kitchen Supplies', 89.99, 50, 4.6),
+13
+    (2, 'Mem
+
+SELECT*
+FROM superstore
+ORDER BY price;
+
+SELECT SUM(price)
+FROM superstore;
+
+SELECT MAX (price),category
+FROM superstore
+WHERE category = "Kitchen Supplies"
+ORDER BY price;
+
+-->35 in stock
+
+SELECT*
+FROM superstore
+WHERE stock_quantity>35
+ORDER BY stock_quantity DESC
